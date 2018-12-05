@@ -3,15 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>auction</groupId>
     <artifactId>auction</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
+
     <properties>
         <spring.version>4.3.19.RELEASE</spring.version>
+        <spring.security.version>4.2.10.RELEASE</spring.security.version>
         <javax.version>3.0.1</javax.version>
         <jstl.version>1.2</jstl.version>
+        <postgre.version>42.2.4</postgre.version>
     </properties>
+
     <dependencies>
         <!-- Spring Framework -->
         <dependency>
@@ -29,12 +34,43 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <!-- postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgre.version}</version>
+        </dependency>
+
         <!-- javax -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.version}</version>
         </dependency>
+
         <!-- jstl -->
         <dependency>
             <groupId>jstl</groupId>
@@ -42,6 +78,7 @@
             <version>${jstl.version}</version>
         </dependency>
     </dependencies>
+
     <build>
         <finalName>auction</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
