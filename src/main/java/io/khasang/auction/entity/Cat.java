@@ -11,7 +11,6 @@ public class Cat {
     private long id;
 
     private String name;
-    @Transient
     private String description;
 
     public long getId() {
