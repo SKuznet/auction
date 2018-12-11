@@ -7,7 +7,13 @@
     <groupId>auction</groupId>
     <artifactId>auction</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+
+    <modules>
+        <module>rest</module>
+        <module>integrationtest</module>
+    </modules>
+    
+    <packaging>pom</packaging>
 
     <properties>
         <spring.version>4.3.19.RELEASE</spring.version>
@@ -17,6 +23,7 @@
         <postgre.version>42.2.4</postgre.version>
         <hibernate.version>5.3.7.Final</hibernate.version>
         <jackson.version>2.7.8</jackson.version>
+        <junit.version>4.12</junit.version>
     </properties>
 
     <dependencies>
@@ -112,6 +119,13 @@
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
+        </dependency>
+
+        <!-- junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
         </dependency>
     </dependencies>
 

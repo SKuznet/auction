@@ -1,8 +1,6 @@
 package io.khasang.auction.controller;
 
 import io.khasang.auction.model.MessageService;
-import io.khasang.auction.model.impl.MessageServiceCustomImpl;
-import io.khasang.auction.model.impl.MessageServiceImpl;
 import io.khasang.auction.service.CreateTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
