@@ -26,6 +26,11 @@ public class AppController {
         return "hello";
     }
 
+    @RequestMapping("/info")
+    public String getHelloPage() {
+        return "cat";
+    }
+
     @RequestMapping("/create")
     public String getCreateTableStatus(Model model) {
         model.addAttribute("status", createTable.getTableCreationStatus());
