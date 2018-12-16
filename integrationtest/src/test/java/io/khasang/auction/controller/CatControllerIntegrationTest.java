@@ -17,9 +17,6 @@ public class CatControllerIntegrationTest {
     private static final String ALL = "/all";
     private static final String GET_BY_ID = "/get";
 
-    // todo
-    // update, delete
-
     @Test
     public void addCat() {
         Cat cat = createdCat();
