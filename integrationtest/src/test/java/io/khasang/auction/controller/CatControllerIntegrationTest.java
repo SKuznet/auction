@@ -1,11 +1,13 @@
 package io.khasang.auction.controller;
 
 import io.khasang.auction.entity.Cat;
+import io.khasang.auction.entity.CatWoman;
 import org.junit.Test;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -77,6 +79,18 @@ public class CatControllerIntegrationTest {
         Cat cat = new Cat();
         cat.setName("Barsik");
         cat.setDescription("Happy");
+
+        CatWoman riska = new CatWoman();
+        riska.setName("riska");
+        riska.setDescription("good");
+        CatWoman murka = new CatWoman();
+        murka.setName("murka");
+        murka.setDescription("sleepy");
+        List<CatWoman> catWomens = new ArrayList<>();
+        catWomens.add(murka);
+        catWomens.add(riska);
+        cat.setCatWomanList(catWomens);
+
         return cat;
     }
 }

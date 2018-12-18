@@ -1,30 +1,19 @@
 package io.khasang.auction.entity;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-@Table(name = "cats")
-public class Cat {
+public class CatWoman {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "cat_id")
     private long id;
 
     private String name;
     private String description;
-
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<CatWoman> catWomanList = new ArrayList<>();
-
-    public List<CatWoman> getCatWomanList() {
-        return catWomanList;
-    }
-
-    public void setCatWomanList(List<CatWoman> catWomanList) {
-        this.catWomanList = catWomanList;
-    }
 
     public long getId() {
         return id;
