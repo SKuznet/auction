@@ -1,7 +1,5 @@
 package io.khasang.auction.entity;
 
-import org.hibernate.type.BigIntegerType;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,7 +9,7 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(precision=19)
-    private BigIntegerType id;
+    private long id;
 
     private String name;
     private String email;
@@ -20,11 +18,11 @@ public class Users {
     private String role;
     private String nickname;
 
-    public BigIntegerType getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(BigIntegerType id) {
+    public void setId(long id) {
         this.id = id;
     }
 
