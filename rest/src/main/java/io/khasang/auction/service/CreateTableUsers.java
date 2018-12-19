@@ -19,7 +19,7 @@ public class CreateTableUsers {
                     "\temail varchar(255) NOT NULL,\n" +
                     "\tsurname varchar(255) NOT NULL,\n" +
                     "\tmiddle_name varchar(255) NOT NULL,\n" +
-                    "\trole varchar(255) NOT NULL DEFAULT USER,\n" +
+                    "\trole varchar(255) DEFAULT 'USER',\n" +
                     "\tnickname varchar(255) NOT NULL,\n" +
                     "\tpassword varchar(255) NOT NULL,\n" +
                     "\tCONSTRAINT users_pk PRIMARY KEY (id)\n" +
