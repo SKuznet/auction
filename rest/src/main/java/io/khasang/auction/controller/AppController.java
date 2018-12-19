@@ -2,6 +2,7 @@ package io.khasang.auction.controller;
 
 import io.khasang.auction.model.MessageService;
 import io.khasang.auction.service.CreateTable;
+import io.khasang.auction.service.CreateTableUsers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -18,6 +19,9 @@ public class AppController {
 
     @Autowired
     private CreateTable createTable;
+
+    @Autowired
+    private CreateTableUsers createTableUsers;
 
     // http://localhost:8080/
     @RequestMapping("/")
@@ -37,10 +41,21 @@ public class AppController {
         return "create";
     }
 
+    @RequestMapping("/create_table_users")
+    public String getCreateTableUsersStatus(Model model) {
+        model.addAttribute("status", createTableUsers.getTableCreationStatus());
+        return "create";
+    }
+
     @RequestMapping("/user")
     public String getUserPage(Model model) {
         model.addAttribute("user", "Access for user only!");
         return "user";
+    }
+
+    @RequestMapping("/registration")
+    public String getRegistrationPage(Model model) {
+        return null;
     }
 
     @RequestMapping("/admin")

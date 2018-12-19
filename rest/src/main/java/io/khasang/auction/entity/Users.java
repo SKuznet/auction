@@ -8,7 +8,6 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(precision=19)
     private long id;
 
     private String name;
@@ -17,6 +16,15 @@ public class Users {
     private String middle_name;
     private String role;
     private String nickname;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public long getId() {
         return id;
