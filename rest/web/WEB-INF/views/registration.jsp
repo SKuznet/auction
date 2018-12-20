@@ -8,7 +8,6 @@
 <script>
     var service = 'http://localhost:8080/registration';
 
-
     var RestPOST = function (name, surname, middle_name, nickname, email, password) {
         var JSOBObject = {
             'surname': surname,
@@ -35,7 +34,6 @@
             }
         });
     };
-
 
 </script>
 <body>

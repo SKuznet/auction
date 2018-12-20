@@ -1,11 +1,9 @@
 package io.khasang.auction.controller;
 
 import io.khasang.auction.entity.Users;
-import io.khasang.auction.service.CreateTableUsers;
 import io.khasang.auction.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,15 +13,6 @@ import java.util.List;
 public class UsersController {
     @Autowired
     private UsersService usersService;
-
-    @Autowired
-    private CreateTableUsers createTable;
-
-    @RequestMapping("/create_table_users")
-    public String getCreateTableStatus(Model model) {
-        model.addAttribute("status", createTable.getTableCreationStatus());
-        return "create";
-    }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
     @ResponseBody
