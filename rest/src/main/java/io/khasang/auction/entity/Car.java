@@ -18,7 +18,7 @@ public class Car {
     @Column(columnDefinition = "DATE")
     private LocalDate year;
 
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "carList")
     private List<Employee> employees = new ArrayList<>();
 

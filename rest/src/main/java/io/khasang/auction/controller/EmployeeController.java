@@ -1,5 +1,6 @@
 package io.khasang.auction.controller;
 
+import io.khasang.auction.dto.EmployeeDTO;
 import io.khasang.auction.entity.Employee;
 import io.khasang.auction.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,7 @@ public class EmployeeController {
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     @ResponseBody
-    public List<Employee> getAllCats() {
+    public List<EmployeeDTO> getAllEmployees() {
         return employeeService.getAll();
     }
 

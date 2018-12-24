@@ -1,5 +1,6 @@
 package io.khasang.auction.controller;
 
+import io.khasang.auction.dto.EmployeeDTO;
 import io.khasang.auction.entity.Car;
 import io.khasang.auction.entity.Employee;
 import org.junit.Test;
@@ -43,15 +44,15 @@ public class EmployeeControllerIntegrationTest {
         createdEmployee();
 
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<List<Employee>> responseEntity = restTemplate.exchange(
+        ResponseEntity<List<EmployeeDTO>> responseEntity = restTemplate.exchange(
                 ROOT + ALL,
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<List<Employee>>() {
+                new ParameterizedTypeReference<List<EmployeeDTO>>() {
                 }
         );
 
-        List<Employee> employees = responseEntity.getBody();
+        List<EmployeeDTO> employees = responseEntity.getBody();
         assertNotNull(employees.get(0));
         assertNotNull(employees.get(1));
     }

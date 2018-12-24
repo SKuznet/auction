@@ -1,5 +1,6 @@
 package io.khasang.auction.service;
 
+import io.khasang.auction.dto.EmployeeDTO;
 import io.khasang.auction.entity.Employee;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public interface EmployeeService {
      *
      * @return all employee
      */
-    List<Employee> getAll();
+    List<EmployeeDTO> getAll();
 
     /**
      * method for update employee
