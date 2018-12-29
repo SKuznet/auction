@@ -1,3 +1,50 @@
-body {
-    background-color: green;
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+body{
+    background-color: #f2f2f2;
+    color: #555;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 70px;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+}
+
+.navbar{
+    font-weight: 800;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-inverse{
+    background: #2d2d2d;
+    border-color: #2d2d2d;
+}
+
+#headerwrap{
+    margin-top: -10px;
+    padding-top: 20px;
+    text-align: center;
+    background: url("../img/bg_auctioneer.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 810px;
+    width: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.page-footer{
+    background: #2d2d2d;
+    border-color: #2d2d2d;
 }
