@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Home page</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <!-- Bootstrap core CSS -->
@@ -15,7 +15,6 @@
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
 
 <!-- Start your project here-->
@@ -41,7 +40,7 @@
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Sign in</a></li>
                     <li class="nav-item"><a href="http://localhost:8080/registration"
-                                            class="nav-link waves-effect waves-light">Register</a>
+                                            class="nav-link waves-effect waves-light">Sign up</a>
                     </li>
                 </ul>
             </div>
@@ -73,7 +72,7 @@
                     <!--Text-->
                     <p class="card-text">Place your bets on your favorite products online!</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                    <button type="button" class="btn blue-grey darken-1 btn-md">Read more</button>
                 </div>
             </div>
             <!-- Card -->
@@ -95,7 +94,7 @@
                     <!--Text-->
                     <p class="card-text">Take advantage of our services and work with the owners of goods directly!</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                    <button type="button" class="btn blue-grey darken-1 btn-md">Read more</button>
                 </div>
             </div>
             <!-- Card -->
@@ -117,7 +116,7 @@
                     <!--Text-->
                     <p class="card-text">Looking for a special product? Discuss this and other issues on our forum!</p>
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                    <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                    <button type="button" class="btn blue-grey darken-1 btn-md">Read more</button>
                 </div>
             </div>
             <!-- Card -->
@@ -136,7 +135,6 @@
     <!-- Copyright -->
 </footer>
 <!-- Footer -->
-
 <!-- /Start your project here-->
 
 <!-- SCRIPTS -->

@@ -1,9 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Registration page</title>
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <script>
     var service = 'http://localhost:8080/registration';
@@ -37,61 +46,44 @@
 
 </script>
 <body>
-<h1>Registration form</h1>
 
-<table class="registration_form">
-    <tr>
-        Fill in the fields below. All fields are required!
-    </tr>
-    <tr>
-    <tr>
-        <td>
-            Surname: <input id="userSurname" value="">
-        </td>
-    </tr>
-    <tr>
-    <tr>
-        <td>
-            Name: <input id="userName" value="">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Middle Name: <input id="userMiddleName" value="">
-        </td>
-    </tr>
+<!-- Default form register -->
+<form class="text-center border border-light p-5">
 
-    <tr>
-        <td>
-            Nickname: <input id="userNickname" value="">
-        </td>
-    </tr>
-    <tr>
-    <tr>
-        <td>
-            Email: <input id="userEmail" value="">
-        </td>
-    </tr>
-    <tr>
-    <tr>
-        <td>
-            Password: <input id="userPassword" value="">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <button type="button" onclick="RestPOST($('#userName').val(),$('#userEmail').val(),
-             $('#userSurname').val(),$('#userMiddleName').val(),$('#userNickname').val(),
-             $('#userPassword').val())">Send</button>
-        </td>
-    </tr>
-</table>
-<div class="panel panel-default">
-    <div class="page-heading">
-        <strong>RESPONSE</strong>
-    </div>
-    <div class="panel-body" id="response">
-    </div>
-</div>
+    <p class="h4 mb-4">Sign up</p>
+
+    <!-- First name -->
+    <input type="text" id="userFirstName" class="form-control" placeholder="First name">
+    <br>
+    <!-- Middle name -->
+    <input type="text" id="userMiddleName" class="form-control" placeholder="Middle name">
+    <br>
+    <!-- Last name -->
+    <input type="text" id="userLastName" class="form-control" placeholder="Last name">
+    <br>
+    <!-- Nickname -->
+    <input type="text" id="userNickname" class="form-control mb-4" placeholder="Nickname">
+    <!-- E-mail -->
+    <input type="email" id="userEmail" class="form-control mb-4" placeholder="E-mail">
+    <!-- Password -->
+    <input type="password" id="userPassword" class="form-control" placeholder="Password">
+    <br>
+    <!-- Sign up button -->
+    <button class="btn btn-info blue-grey darken-1 btn-block" type="submit" onclick="RestPOST($('#userFirstName').val(),
+    $('#userEmail').val(),$('#userLastName').val(),$('#userMiddleName').val(),$('#userNickname').val(),
+    $('#userPassword').val())">Sign in
+    </button>
+</form>
+<!-- Default form register -->
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
