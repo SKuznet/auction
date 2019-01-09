@@ -29,7 +29,7 @@
             </button>
             <div class="navbar-collapse collapse" id="navigationMenu">
                 <ul class="navbar-nav mr-auto smooth-scroll">
-                    <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Home</a></li>
+                    <li class="nav-item"><a href="http://localhost:8080" class="nav-link waves-effect waves-light">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Lots</a></li>
                     <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Service</a></li>
                     <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Forum</a></li>
