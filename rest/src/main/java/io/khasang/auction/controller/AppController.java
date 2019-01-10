@@ -47,7 +47,12 @@ public class AppController {
     }
 
     @RequestMapping("/registration")
-    public String getRegistrationPage(Model model) {
+    public String getRegistrationPage() {
+        return null;
+    }
+
+    @RequestMapping("/lk")
+    public String getLkPage() {
         return null;
     }
 
