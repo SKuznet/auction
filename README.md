@@ -34,4 +34,10 @@
  
  [yandex.ru](http://yandex.ru)
  
- ![text](https://img2.goodfon.com/original/1920x1200/a/15/amazed-cat-surprised-kitty.jpg) 
+ ![text](https://img2.goodfon.com/original/1920x1200/a/15/amazed-cat-surprised-kitty.jpg)
+ 
+ | Column1 | Column2 |
+ | ----- | ----- |
+ | text1 | text2 | 
+ | text1 | text2 | 
+ | text1 | text2 | 
