@@ -68,6 +68,30 @@
     </div>
 </div>
 <!-- Log Out form-->
+
+<!-- Tabs-->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="myLots-tab" data-toggle="tab" href="#myLots" role="tab" aria-controls="myLots" aria-selected="true">My Lots</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="trackedLots-tab" data-toggle="tab" href="#trackedLots" role="tab" aria-controls="trackedLots" aria-selected="false">Tracked Lots</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="myLots" role="tabpanel" aria-labelledby="myLots-tab">Create and manage lots. Add a new lot here!</div>
+    <div class="tab-pane fade" id="trackedLots" role="tabpanel" aria-labelledby="trackedLots-tab">Keep track of your favorite lots or in which you already participate. If you participate in the auction item automatically falls into this section.</div>
+    <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab"></div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+</div>
+<!-- Tabs-->
+
 <!-- Footer -->
 <footer class="page-footer font-small fixed-bottom">
     <!-- Copyright -->
