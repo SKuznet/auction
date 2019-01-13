@@ -13,6 +13,8 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
 </head>
 <body>
 <!-- Start your project here-->
@@ -78,6 +80,9 @@
         <a class="nav-link" id="trackedLots-tab" data-toggle="tab" href="#trackedLots" role="tab" aria-controls="trackedLots" aria-selected="false">Tracked Lots</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" id="myGoods-tab" data-toggle="tab" href="#myGoods" role="tab" aria-controls="myGoods" aria-selected="false">My Goods</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
     </li>
     <li class="nav-item">
@@ -85,10 +90,83 @@
     </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="myLots" role="tabpanel" aria-labelledby="myLots-tab">Create and manage lots. Add a new lot here!</div>
+    <br>
+    <div class="tab-pane fade show active" id="myLots" role="tabpanel" aria-labelledby="myLots-tab">Create and manage lots. Add a new lot here!
+        <table id="table-lots" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+            <tr>
+                <th>Lot Name</th>
+                <th>Lot Description</th>
+                <th>Lot start date</th>
+                <th>Lot stop date</th>
+                <th>Lot start cost</th>
+                <th>Lot stop cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Oldest Wood Table</td>
+                <td>Best Wood Table ever! Buy it!</td>
+                <td>2018.01.01</td>
+                <td>2018.12.31</td>
+                <td>1000$</td>
+                <td>1200$</td>
+            </tr>
+            <tr>
+                <td>Voodoo Doll</td>
+                <td>Best Voodoo Doll ever! Buy it!</td>
+                <td>2018.01.01</td>
+                <td>2018.12.31</td>
+                <td>1000$</td>
+                <td>1400$</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
     <div class="tab-pane fade" id="trackedLots" role="tabpanel" aria-labelledby="trackedLots-tab">Keep track of your favorite lots or in which you already participate. If you participate in the auction item automatically falls into this section.</div>
+    <div class="tab-pane fade" id="myGoods" role="tabpanel" aria-labelledby="myGoods-tab">Add your goods here
+        <table id="table-goods" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Description</th>
+                <th>Item Picture</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Wood Table</td>
+                <td>Best Wood Table ever! Buy it!</td>
+                <td>None</td>
+            </tr>
+            <tr>
+                <td>Doll</td>
+                <td>Best Voodoo Doll ever! Buy it!</td>
+                <td>None</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
     <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab"></div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Check or change your profile data here.
+        <form class="text-center border border-light p-5">
+            <!-- First name -->
+            <input type="text" id="userFirstName" class="form-control mb-4" placeholder="First name">
+            <!-- Middle name -->
+            <input type="text" id="userMiddleName" class="form-control mb-4" placeholder="Middle name">
+            <!-- Last name -->
+            <input type="text" id="userLastName" class="form-control mb-4" placeholder="Last name">
+            <!-- Nickname -->
+            <input type="text" id="userNickname" class="form-control mb-4" placeholder="Nickname">
+            <!-- E-mail -->
+            <input type="email" id="userEmail" class="form-control mb-4" placeholder="E-mail">
+            <!-- Password -->
+            <input type="password" id="userPassword" class="form-control mb-4" placeholder="Password">
+            <!-- Save changes -->
+            <button class="btn btn-info blue-grey darken-1 btn-block" type="submit">Save changes
+            </button>
+        </form>
+    </div>
 </div>
 <!-- Tabs-->
 
@@ -112,5 +190,9 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- LK JavaScript -->
+<script type="text/javascript" src="js/lk.js"></script>
+<!-- Datatables -->
+<script type="text/javascript" src="js/datatables.min.js"></script>
 </body>
 </html>
