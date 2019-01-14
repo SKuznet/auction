@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,7 +27,8 @@
             </button>
             <div class="navbar-collapse collapse" id="navigationMenu">
                 <ul class="navbar-nav mr-auto smooth-scroll">
-                    <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Home</a></li>
+                    <li class="nav-item"><a href="http://localhost:8080"
+                                            class="nav-link waves-effect waves-light">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Lots</a></li>
                     <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Service</a></li>
                     <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Forum</a></li>
@@ -38,9 +37,10 @@
                     <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
                 </form>
                 <ul class="navbar-nav navbar-right">
-                    <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light">Sign in</a></li>
-                    <li class="nav-item"><a href="http://localhost:8080/registration"
-                                            class="nav-link waves-effect waves-light">Sign up</a>
+                    <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light" data-toggle="modal"
+                                            data-target="#modalLoginForm">Sign in</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link waves-effect waves-light" data-toggle="modal"
+                                            data-target="#modalRegisterForm">Sign up</a>
                     </li>
                 </ul>
             </div>
@@ -48,6 +48,91 @@
     </nav>
 </header>
 <br>
+
+<!-- Sign In & Sign Up forms-->
+<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="defaultForm-email" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                </div>
+
+                <div class="md-form mb-4">
+                    <i class="fas fa-lock prefix grey-text"></i>
+                    <input type="password" id="defaultForm-pass" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn blue-grey darken-1 btn-md">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="userFirstName" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="userFirstName">Your name</label>
+                </div>
+                <div class="md-form mb-5">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="userMiddleName" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="userMiddleName">Your middle name</label>
+                </div>
+                <div class="md-form mb-5">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="userLastName" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="userLastName">Your last name</label>
+                </div>
+                <div class="md-form mb-5">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="userNickname" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="userNickname">Your nickname</label>
+                </div>
+                <div class="md-form mb-5">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="userEmail" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="userEmail">Your email</label>
+                </div>
+                <div class="md-form mb-4">
+                    <i class="fas fa-lock prefix grey-text"></i>
+                    <input type="password" id="userPassword" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="userPassword">Your password</label>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-deep-orange" onclick="RestPOST($('#userFirstName').val(),
+    $('#userEmail').val(),$('#userLastName').val(),$('#userMiddleName').val(),$('#userNickname').val(),
+    $('#userPassword').val())">Sign up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sign In & Sign Up forms-->
+
 <div id="headerwrap">
     <div class="container">
         <div class="col-lg-8 col-lg-offset-2">
@@ -146,6 +231,8 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Registration -->
+<script type="text/javascript" src="js/registration.js"></script>
 </body>
 
 </html>
