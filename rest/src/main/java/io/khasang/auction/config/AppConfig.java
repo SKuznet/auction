@@ -1,10 +1,13 @@
 package io.khasang.auction.config;
 
 import io.khasang.auction.dao.CatDao;
+import io.khasang.auction.dao.UsersDao;
 import io.khasang.auction.dao.EmployeeDao;
 import io.khasang.auction.dao.impl.CatDaoImpl;
+import io.khasang.auction.dao.impl.UsersDaoImpl;
 import io.khasang.auction.dao.impl.EmployeeDaoImpl;
 import io.khasang.auction.entity.Cat;
+import io.khasang.auction.entity.Users;
 import io.khasang.auction.entity.Employee;
 import io.khasang.auction.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +62,11 @@ public class AppConfig {
     @Bean
     public CatDao catDao() {
         return new CatDaoImpl(Cat.class);
+    }
+
+    @Bean
+    public UsersDao usersDao() {
+        return new UsersDaoImpl(Users.class);
     }
 
     @Bean

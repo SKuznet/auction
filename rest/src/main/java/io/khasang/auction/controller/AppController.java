@@ -24,14 +24,8 @@ public class AppController {
 
     // http://localhost:8080/
     @RequestMapping("/")
-    public String getHelloPage(Model model) {
-        model.addAttribute("name", messageService.getMessage());
-        return "hello";
-    }
-
-    @RequestMapping("/info")
     public String getHelloPage() {
-        return "cat";
+        return "index";
     }
 
     @RequestMapping("/create")
