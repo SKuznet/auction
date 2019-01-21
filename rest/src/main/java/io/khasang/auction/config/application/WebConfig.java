@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+
 @Configuration
 @ComponentScan({"io.khasang.auction"})
 @EnableWebMvc
@@ -18,7 +19,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/views/");
         viewResolver.setSuffix(".jsp");
+
         viewResolver.setContentType("text/html;charset=utf-8");
+
         return viewResolver;
     }
 
