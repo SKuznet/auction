@@ -40,7 +40,6 @@ public class AppController {
         return "user";
     }
 
-
     @RequestMapping("/registration")
     public String getRegistrationPage() {
         return null;
@@ -50,7 +49,6 @@ public class AppController {
     public String getLkPage() {
         return null;
     }
-
 
     @RequestMapping("/admin")
     public String getAdminPage(Model model) {
